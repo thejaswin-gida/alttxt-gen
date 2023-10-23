@@ -8,7 +8,7 @@ import streamlit as st
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-PROJECT_ID = st.secrets['Project_id']
+PROJECT_ID = st.secrets["Project_id"]
 LOCATION = 'us-central1'
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 model = ImageTextModel.from_pretrained("imagetext@001")
@@ -46,7 +46,7 @@ def generateDesc(para):
         {"role": "user", "content": formatter},
         {"role": "user", "content": instruction},
     ]
-    openai.api_key = st.secrets['openai_key']
+    openai.api_key = st.secrets["openai_key"]
     response = openai.ChatCompletion.create(
         model="gpt-4", messages=conversation,)
     return response.choices[0].message.content
