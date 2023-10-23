@@ -8,7 +8,7 @@ import streamlit as st
 
 os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
-PROJECT_ID = st.secrets["Project_id"]
+PROJECT_ID = 'data-science-401804'
 LOCATION = 'us-central1'
 vertexai.init(project=PROJECT_ID, location=LOCATION)
 model = ImageTextModel.from_pretrained("imagetext@001")
