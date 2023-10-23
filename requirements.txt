@@ -1,3 +1,4 @@
 google-cloud-vision
 google-cloud-aiplatform
 openai
+grpcio
