@@ -10,7 +10,7 @@ os.environ["KMP_DUPLICATE_LIB_OK"] = "TRUE"
 
 PROJECT_ID = 'data-science-401804'
 LOCATION = 'us-central1'
-vertexai.init(project=PROJECT_ID, location=LOCATION)
+# vertexai.init(project=PROJECT_ID, location=LOCATION)
 model = ImageTextModel.from_pretrained("imagetext@001")
 st.title("Image Alt Text and Description Generator")
 
